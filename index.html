@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="container-input">
+            <input type="text" id="number">
+        </div>
+        <div class="container-button">
+            <!-- <div class="container-button-item"> -->
+            <button class="btn_number" id="number_1" type="button" onclick="setValue(1)">1</button>
+            <button class="btn_number" id="number_2" type="button" onclick="setValue(2)">2</button>
+            <button class="btn_number" id="number_3" type="button" onclick="setValue(3)">3</button>
+            <button class="btn_number" id="number_4" type="button" onclick="setValue(4)">4</button>
+            <button class="btn_number" id="number_5" type="button" onclick="setValue(5)">5</button>
+            <button class="btn_number" id="number_6" type="button" onclick="setValue(6)">6</button>
+            <button class="btn_number" id="number_7" type="button" onclick="setValue(7)">7</button>
+            <button class="btn_number" id="number_8" type="button" onclick="setValue(8)">8</button>
+            <button class="btn_number" id="number_9" type="button" onclick="setValue(9)">9</button>
+            <button class="btn_number" id="number_0" type="button" onclick="setValue(0)">0</button>
+            <!-- </div> -->
+            <!-- <div class="btn"> -->
+            <button class="btn-item" type="button" onclick="clearValue()">C</button>
+            <button class="btn-item" type="button" onclick="setValue('/')">/</button>
+            <button class="btn-item" type="button" onclick="setValue('+')">+</button>
+            <button class="btn-item" type="button" onclick="setValue('-')">-</button>
+            <button class="btn-item" type="button" onclick="setValue('*')">*</button>
+            <button class="btn-item" type="button" onclick="Calculator()">=</button>
+            <!-- </div> -->
+
+        </div>
+    </div>
+
+</body>
+
+<script>
+
+    function setValue(param) {
+        document.getElementById("number").value += param
+    }
+
+    function Calculator() {
+
+        let input = document.getElementById("number").value
+        result = eval(input);
+        document.getElementById('number').value = result;
+        
+    }
+
+    function clearValue() {
+        document.getElementById("number").value = ''
+    }
+</script>
+
+</html>
